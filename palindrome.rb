@@ -9,21 +9,21 @@ module Palindrome
 	end
 
 	  private
-	  
-	  # Returns content for palindrome testing.
-	  def processed_content
-	    to_s.downcase
-	  end
+
+	# Returns content for palindrome testing.
+	def processed_content
+		to_s.downcase
+	end
 end
 
 
-# class String
-# 	include Palindrome
-# end
+class String
+	include Palindrome
+end
 
-# class Integer
-# 	include Palindrome
-# end
+class Integer
+	include Palindrome
+end
 
 # # alternatively extend String
 # class String
@@ -36,7 +36,7 @@ end
 # 	# returns  returns true if the string is empty or consists solely of whitespace
 # 	def blank?
 # 		self.match(/^\s$/) ? true : false
-# 	end 
+# 	end
 
 #   private
 #   # Returns content for palindrome testing.

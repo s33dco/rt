@@ -1,10 +1,10 @@
 def sandwich
 	puts 'top bread'
 	yield
-	puts 'bottom bread' 
+	puts 'bottom bread'
 end
 
-sandwich{puts 'mutton. lettuce and tomato'}
+sandwich{puts 'mutton, lettuce and tomato'}
 
 def tag (tagname, text)
 	html = "<#{tagname}>#{text}</#{tagname}>"

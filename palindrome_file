@@ -1,0 +1,21 @@
+#!/usr/bin/env ruby
+require "s33dco_palindrome"
+
+puts "hello world"
+
+lines = File.readlines("phrases.txt")
+lines.each do |line|
+  if line.palindrome?
+    puts "palindrome detected: #{line}"
+  end
+end
+
+palindromes = lines.select(&:palindrome?)
+p palindromes
+
+File.write('palindromes_file.txt', palindromes.join)
+
+
+puts "\n\n plaindromes found output in 'palindromes_file.txt' \n\n"
+
+palindromes.each{|p| puts "detected : #{p}"}
