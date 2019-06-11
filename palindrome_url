@@ -1,10 +1,9 @@
 #!/usr/bin/env ruby
 require "s33dco_palindrome"
-require "open-uri"
 
+puts "hello world"
 
-
-lines = open('https://cdn.learnenough.com/phrases.txt').readlines
+lines = File.readlines("phrases.txt")
 lines.each do |line|
   if line.palindrome?
     puts "palindrome detected: #{line}"
@@ -14,7 +13,7 @@ end
 palindromes = lines.select(&:palindrome?)
 p palindromes
 
-File.write('palindromes_file.txt', palindromes.join)
+File.write('palindromes_url.txt', palindromes.join)
 
 
 puts "\n\n plaindromes found output in 'palindromes_file.txt' \n\n"
